@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-dark: #0b0e14;
+    --panel-dark: #141a24;
+    --accent-red: #d13426;
+    --gold: #d4af37;
+    --gold-light: #fbe282;
+    --text-main: #f3ebd9;
+    --text-muted: #9ba8b8;
+  }
+
+  body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Be Vietnam Pro', sans-serif;
+    image-rendering: pixelated;
+  }
+}
+
+.font-pixel {
+  font-family: 'Press Start 2P', monospace;
+}
+
+.font-vt {
+  font-family: 'VT323', monospace;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.pixel-art {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+.pixel-box {
+  background: #141a24;
+  border: 3px solid #d4af37;
+  box-shadow: 4px 4px 0 #000;
+}
+
+.pixel-box-crimson {
+  background: #1c0e12;
+  border: 3px solid #e04b40;
+  box-shadow: 4px 4px 0 #000;
+}
+
+.pixel-btn {
+  font-family: 'Press Start 2P', monospace;
+  box-shadow: 4px 4px 0 #000;
+  transition: transform 0.05s ease, box-shadow 0.05s ease, filter 0.15s ease;
+  user-select: none;
+}
+
+.pixel-btn:hover {
+  filter: brightness(1.15);
+}
+
+.pixel-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #000;
+}
+
+/* CRT Scanline & Glitch Effect */
+.scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%,
+    rgba(0, 0, 0, 0.25) 50%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+}
+
+.cyber-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(212, 175, 55, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(212, 175, 55, 0.08) 1px, transparent 1px);
+}
+
+@keyframes glitch {
+  0% { transform: translate(0) }
+  20% { transform: translate(-3px, 2px) }
+  40% { transform: translate(-2px, -2px) }
+  60% { transform: translate(3px, 1px) }
+  80% { transform: translate(1px, -2px) }
+  100% { transform: translate(0) }
+}
+
+.animate-glitch {
+  animation: glitch 0.4s infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.8; filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.4)); }
+  50% { opacity: 1; filter: drop-shadow(0 0 18px rgba(212, 175, 55, 0.9)); }
+}
+
+.pulse-gold {
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+
+/* Custom Scrollbar for Inventory / Dialogues */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0d1219;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4af37;
+  border-radius: 0px;
+}

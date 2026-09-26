@@ -1,0 +1,6 @@
+{
+  "name": "Hành Trình Việt Phục - Ký Ức Chữ S",
+  "description": "Game RPG Pixel phiêu lưu xuyên không khám phá bản đồ chữ S Việt Nam, thu thập cổ phục truyền thống, vượt qua Đấu Trường Tri Thức và đánh bại Virus Lãng Quên.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
